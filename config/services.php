@@ -30,4 +30,6 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'b2b_api' => env('NBN_B2B_ENDPOINT')
+
 ];

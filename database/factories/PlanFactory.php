@@ -17,7 +17,7 @@ class PlanFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->sentence(rand(1, 3)),
+            'name' => $this->faker->sentence(random_int(1, 3)),
             'type' => $this->faker->randomElement(['nbn', 'opticomm', 'mobile']),
             'monthly_cost' => $this->faker->numerify('####'),
         ];
