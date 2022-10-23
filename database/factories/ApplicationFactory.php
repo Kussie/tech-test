@@ -33,16 +33,4 @@ class ApplicationFactory extends Factory
             'order_id' => null,
         ];
     }
-
-    public function withNbnPlan(array $statusAttributes = []): self
-    {
-        return $this
-            ->has(
-                EpisodeOfCareStatus::factory([
-                    'status' => EpisodeOfCareStatusEnum::NEEDS_SCHEDULING,
-                    ...$statusAttributes,
-                ]),
-                'statuses'
-            );
-    }
 }

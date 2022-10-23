@@ -19,4 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// I would assume in the real world this would be in the above route group so it is behind auth.  But Readme.md says to assume that that is out of scope
 Route::apiResource('applications', ApplicationController::class)->only(['index', 'show']);
