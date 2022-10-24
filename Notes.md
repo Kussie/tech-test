@@ -24,6 +24,7 @@ Task 2 Notes:
 	- There is the potential for applications to be processed multiple times in the base application.  Ideally there would be another status between the 'order' status and the completed/failed state that stores a processing state so they arent picked up again by the scheduler
 	- I would also generally store the response from the third party alongside the collection, in case needed for later reference/error tracking, but i have left that as out of scope for the purposes of this task
     - In the tests i explicity create the job using the class and then call handle manually, this is a personal preference and i like doing it this way as it gives me more control over the execution and ensures i can call it when i want (Basically makes setup for those tests easier, and lets me do some asserts on the earlier process of the intended path of the process first)
+    - The job could also be triggered by an event when the status changes, instead of a cron job, which would mitigate the issue raised above about applications being processed multiple times.  However the Readme.md specfically mentioned checking every five minutes, which makes the cron job implementation the ideal way. 
 
 
 Overall Notes:
